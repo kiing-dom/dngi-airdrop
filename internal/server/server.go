@@ -1,0 +1,18 @@
+package server
+
+import (
+	"net/http"
+
+	"github.com/kiing-dom/dngi-airdrop/internal/handlers"
+)
+
+func New(addr string) *http.Server {
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("/health", handlers.Health)
+
+	return &http.Server{
+		Addr:    addr,
+		Handler: mux,
+	}
+}
