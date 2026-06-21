@@ -1,6 +1,9 @@
 # doc files
 docs/*
 
+#dngi-airdrop test files
+/uploads
+
 # Binaries
 /bin/
 /dist/
